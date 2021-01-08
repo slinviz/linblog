@@ -1,0 +1,4 @@
+baseURL = "https://linstarsc.github.io/"
+languageCode = "en-us"
+title = "linstarsc's Hugo Site"
+theme = "Ananke"
