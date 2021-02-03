@@ -2,6 +2,31 @@ baseURL = "https://slinviz.github.io/"
 languageCode = "en-us"
 title = "Lin's Hugo Site"
 theme = "Ananke"
+paginate = 5000 #frontpage pagination
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[params]
+  header_image = "images/main_slinviz_wallpaper.jpg"
+  title = "Software Developer"
+  slogan = "KEEP IT UP!"
+  SEOTitle = "Lin Blog"
+  keyword = "Lin, Spark, Hadoop, Docker, Kubernetes, Golang, Python, Shell"
+
+  featured_tags = true 
+  featured_condition_size = 2 # How many posts have to have a given tag to be featured (greater-than)
+
+  image_404 = "images/404_bg.png"
+  title_404 = "We couldn't find what you were looking for..."
+
+  omit_categories = false
+
+  [[params.addtional_menus]]
+  title =  "ABOUT"
+  href =  "/top/about/"
 
 [params.social]
   rss = true
