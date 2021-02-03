@@ -1,2 +1,2 @@
 # linblog
-The source files of https://linstarsc.github.io
+The source files of https://slinviz.github.io

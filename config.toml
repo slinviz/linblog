@@ -1,4 +1,9 @@
-baseURL = "https://linstarsc.github.io/"
+baseURL = "https://slinviz.github.io/"
 languageCode = "en-us"
-title = "linstarsc's Hugo Site"
+title = "Lin's Hugo Site"
 theme = "Ananke"
+
+[params.social]
+  rss = true
+  email = "slinviz@gmail.com"
+  github = "https://github.com/slinviz"
