@@ -1,5 +1,5 @@
 ---
-title: "DB-SQL"
+title: "DBSQL"
 date: 2021-02-03T21:43:48+08:00
 draft: true
 ---
@@ -9,7 +9,7 @@ draft: true
 
 数据库管理系统DBMS：用来管理数据库的计算机软件；
 
-SQL：Structured Query Language 即结构化查询语言。
+SQL：Structured Query Language 即结构化查询语言;
 
 使用数据库管理系统的好处：共享数据、海量数据管理、容错、故障恢复、自动化。
 
