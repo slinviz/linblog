@@ -1,34 +1,88 @@
 baseURL = "https://slinviz.github.io/"
 languageCode = "en-us"
-title = "Lin's Hugo Site"
-theme = "Ananke"
+title = "Lin's Blog Site"
 paginate = 5000 #frontpage pagination
 
+theme = "hugo-geekdoc"
+
+# Geekdoc required configuration
+pluralizeListTitles = false
+pygmentsUseClasses = true
+pygmentsCodeFences = true
+disablePathToLower = true
+enableGitInfo = true
+timeout = 180000
+
+# Needed for mermaid shortcodes
 [markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
+  [markup.goldmark.renderer]
+    # Needed for mermaid shortcode
+    unsafe = true
+  [markup.tableOfContents]
+    startLevel = 1
+    endLevel = 9
 
 [params]
-  header_image = "images/main_slinviz_wallpaper.jpg"
-  title = "Software Developer"
-  slogan = "KEEP IT UP!"
-  SEOTitle = "Lin Blog"
-  keyword = "Lin, Spark, Hadoop, Docker, Kubernetes, Golang, Python, Shell"
+  # (Optional, default 6) Set how many table of contents levels to be showed on page.
+  # Use false to hide ToC, note that 0 will default to 6 (https://gohugo.io/functions/default/)
+  # You can also specify this parameter per page in front matter.
+  geekdocToC = 6
 
-  featured_tags = true 
-  featured_condition_size = 2 # How many posts have to have a given tag to be featured (greater-than)
+  # (Optional, default static/brand.svg) Set the path to a logo for the Geekdoc
+  # relative to your 'static/' folder.
+  geekdocLogo = "logo.jpeg"
 
-  image_404 = "images/404_bg.png"
-  title_404 = "We couldn't find what you were looking for..."
+  # (Optional, default false) Render menu from data file im 'data/menu/main.yaml'.
+  geekdocMenuBundle = false
 
-  omit_categories = false
+  # (Optional, default true) Show page navigation links at the bottom of each
+  # docs page (bundle menu only).
+  geekdocNextPrev = true
+
+  # (Optional, default true) Show a breadcrumb navigation bar at the top of each docs page.
+  # You can also specify this parameter per page in front matter.
+  geekdocBreadcrumb = true
+
+  # (Optional, default none) Set source repository location. Used for 'Edit this page' links.
+  # You can also specify this parameter per page in front matter.
+  geekdocRepo = "https://github.com/slinviz/linblog"
+
+  # (Optional, default none) Enable 'Edit this page' links. Requires 'GeekdocRepo' param
+  # and path must point to 'content' directory of repo.
+  # You can also specify this parameter per page in front matter.
+  geekdocEditPath = "https://github.com/slinviz/linblog/tree/main/content"
+
+  # (Optional, default true) Enables search function with flexsearch.
+  # Index is built on the fly and might slowdown your website.
+  geekdocSearch = true
+
+  # (Optional, default false) Display search results with the parent folder as prefix. This
+  # option allows you to distinguish between files with the same name in different folders.
+  # NOTE: This parameter only applies when 'geekdocSearch = true'.
+  geekdocSearchShowParent = true
+
+  # (Optional, default none) Add a link to your Legal Notice page to the site footer.
+  # It can be either a remote url or a local file path relative to your content directory.
+  # geekdocLegalNotice = "https://blog.example.com/legal"
+
+  # (Optional, default none) Add a link to your Privacy Policy page to the site footer.
+  # It can be either a remote url or a local file path relative to your content directory.
+  # geekdocPrivacyPolicy = "/privacy"
+
+  # (Optional, default true) Add an anchor link to headlines.
+  geekdocAnchor = true
+
+  # (Optional, default true) Copy anchor url to clipboard on click.
+  geekdocAnchorCopy = true
+
+  # (Optional, default true) Enable or disable image lazy loading for images rendered
+  # by the 'img' shortcode.
+  geekdocImageLazyLoading = true
 
   [[params.addtional_menus]]
   title =  "ABOUT"
   href =  "/top/about/"
 
-[params.social]
-  rss = true
-  email = "slinviz@gmail.com"
-  github = "https://github.com/slinviz"
+  [params.social]
+  email          = "slinviz@gmail.com"
+  github         = "https://github.com/slinviz"

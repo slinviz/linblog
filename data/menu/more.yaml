@@ -1,0 +1,13 @@
+---
+more:
+  - name: News
+    ref: "/"
+    icon: "notification"
+  - name: Releases
+    ref: "https://github.com/slinviz/linblog/releases"
+    external: true
+    icon: "download"
+  - name: "View Source"
+    ref: "https://github.com/slinviz/linblog"
+    external: true
+    icon: "github"
