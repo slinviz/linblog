@@ -1,4 +1,4 @@
 ---
-title: "SQL"
+title: "MySQL"
 geekdocCollapseSection: false
 ---
