@@ -1,4 +1,4 @@
 ---
 title: "Hadoop"
-geekdocCollapseSection: false
+geekdocCollapseSection: true
 ---

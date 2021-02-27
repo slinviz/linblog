@@ -1,4 +1,4 @@
 ---
 title: "Java"
-geekdocCollapseSection: false
+geekdocCollapseSection: true
 ---

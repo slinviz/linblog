@@ -1,4 +1,4 @@
 ---
 title: "Redis"
-geekdocCollapseSection: false
+geekdocCollapseSection: true
 ---

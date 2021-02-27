@@ -1,4 +1,4 @@
 ---
 title: "Spark"
-geekdocCollapseSection: false
+geekdocCollapseSection: true
 ---

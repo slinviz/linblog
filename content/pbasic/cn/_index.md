@@ -1,6 +1,6 @@
 ---
 title: "计算机网络"
-geekdocCollapseSection: false
+geekdocCollapseSection: true
 ---
 
 {{< button relref="/" >}}Get Home{{< /button >}}

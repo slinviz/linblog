@@ -1,4 +1,4 @@
 ---
 title: "Scala"
-geekdocCollapseSection: false
+geekdocCollapseSection: true
 ---
