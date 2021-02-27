@@ -1,6 +1,6 @@
 baseURL = "https://slinviz.github.io/"
 languageCode = "en-us"
-title = "Lin's Blog Site"
+title = "Lin's Doc Site"
 paginate = 5000 #frontpage pagination
 
 theme = "hugo-geekdoc"

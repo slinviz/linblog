@@ -1,4 +1,4 @@
 ---
-title: "Data Structure and Algorithm"
+title: "数据结构与算法"
 geekdocCollapseSection: false
 ---
