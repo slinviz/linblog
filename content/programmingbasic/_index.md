@@ -1,4 +1,4 @@
 ---
-title: "Scala"
+title: "Programming Basic"
 geekdocCollapseSection: false
 ---

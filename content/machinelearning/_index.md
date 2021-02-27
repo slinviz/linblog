@@ -1,4 +1,4 @@
 ---
-title: "Scala"
+title: "Machine Learning"
 geekdocCollapseSection: false
 ---
