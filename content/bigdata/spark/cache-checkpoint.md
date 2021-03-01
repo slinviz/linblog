@@ -89,12 +89,14 @@ RDD 需要经过 `[ Initialized --> marked for checkpointing --> checkpointing i
 1. Cache机制中RDD Partition被缓存到内存或磁盘（或内存+磁盘），数据由blockManager管理。
 2. Application退出后Cache在磁盘/内存中的RDD Partition会被清空。
 3. Cache不会破坏RDD的Lineage，即RDD Partition丢失后可以根据计算链重新计算。
+4. 需要cache的 RDD 是在第一次计算得到时以Partition为单位进行缓存的。
 
 <--->
 **Checkpoint**
 1. Checkpoint机制中RDD Partition被**持久化**存储到文件系统（一般是HDFS）。
 2. Application退出后Checkpoint的数据依旧存在，可以被其他应用使用。
 3. Checkpoint会将RDD的依赖关系完全清除，并强加一个Parent RDD `CheckpointRDD`，需要时只能用CheckpointRDD从文件系统中读取数据，如果存储在文件系统上的数据被蓄意破坏，则需要重新启动该Application才能恢复计算。
+4. Checkpoint发生在当前job结束后重新启动一个新的job来完成检查点的存储工作。
 
 
 {{< /columns >}}
