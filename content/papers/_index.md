@@ -1,6 +1,8 @@
 ---
 title: "Paper Review"
 geekdocCollapseSection: true
+geekdocHidden: true
+geekdocHiddenTocTree: true
 ---
 
 
