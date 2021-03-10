@@ -1,6 +1,7 @@
 ---
 title: "Lin"
 geekdocRepo: "https://github.com/slinviz/linblog"
+geekdocToC: 2
 ---
 
 # Motivation
@@ -9,18 +10,4 @@ geekdocRepo: "https://github.com/slinviz/linblog"
 
 # Outlines
 
-+ 编程基础
-    - 操作系统OS
-    - 计算机网络
-    - 数据结构和算法
-+ BigData
-    - Spark
-    - Hadoop
-+ 编程语言
-    - Python
-    - Scala
-    - Java
-+ 机器学习ML
-+ 数据库
-    - MySQL
-    - Redis
+{{< toc-tree >}}
