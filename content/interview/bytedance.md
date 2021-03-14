@@ -17,17 +17,33 @@ categories: []
 
 线程间通信方式
 
+线程和进程的区别
+
 项目介绍
 
 java 线程
 
 java final finalize finally
 
+java == vs equals()
+
 udp vs tcp
 
 tcp 怎么保证可靠
 
 cookie vs session
+
+Java 面向对象的特性：封装、继承、多态，方法覆写是多态还是继承？
+
+自动拆箱和装箱的原因？
+
+HashMap vs HashTable
+
+ArrayList vs LinkedList, 随机访问与插入删除效率比较，哪个占用空间多
+
+JVM 堆的划分
+
+CMS 垃圾回收器的步骤，特点，G1 垃圾回收器的 java 堆划分
 
 冒泡排序和快排的时间复杂度？稳定性？
 
@@ -47,7 +63,7 @@ shell 给个文件只有ip，统计topk
 
 linux 系统文件类型
 
-http 页面请求细节
+http 页面请求细节，即输入URL到浏览器，整个过程
 
 链表反转，链表中间`[n,m]`反转
 
