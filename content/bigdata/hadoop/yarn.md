@@ -25,10 +25,11 @@ YARN 总体来讲依然是采用了 Master/Slave 架构，全局资源管理器 
 ![Arch2](bigdata/yarn-arch-2.png)
 
 ## 1.1 ResourceManager-RM
-RM 是整个集群资源的主要管理者和协调者，负责给用户提交的应用程序分配资源并监控其运行状态。资源分配根据应用程序优先级，队列容量，ACLs，数据位置等信息做出决策，然后以共享的、安全的、多租户的方式制定策略，调度集群资源。
+RM 是整个集群资源的主要管理者和协调者，负责给用户提交的应用程序分配资源并监控其运行状态。资源分配根据应用程序优先级，队列容量，访问控制列表（ACLs），数据位置等信息做出决策，然后以共享的、安全的、多租户的方式制定策略，调度集群资源。
 
 RM 主要由可插拨的调度器（Scheduler）和应用程序管理器（ApplicationManager）两个组件构成：
-### 1.1.1Scheduler
+
+### 1.1.1 Scheduler
 调度器根据各个应用程序（AM）的资源需求进行资源分配，分配的基本单位是Container。Scheduler 是一个纯粹的调度器，不负责应用程序的监控和状态追踪，不保证应用程序的失败或者硬件失败的情况对任务重启。
 
 调度器是根据应用程序优先级，队列容量，数据位置等信息，为应用程序分配封装了资源的 Container，并且调度器是**可插拔**的，例如有 FIFOScheduler、CapacityScheduler、FairScheduler。
@@ -41,14 +42,14 @@ NM 负责管理当前节点的管理者，负责节点资源监视和节点健�
 - NM 启动时向 RM 注册并定时发送心跳信息，等待 RM 的命令；
 - 维护 Container 生命周期，监控 Container 的资源使用情况；
 - 监控 NM 自身的监控状态，管理每个节点上的日志；
-- 管理任务运行时的相关依赖，根据ApplicationMaster的需要，在启动container之前将程序及其依赖拷贝到本地;
+- 管理任务运行时的相关依赖，根据 ApplicationMaster 的需要，在启动 Container 之前将程序及其依赖拷贝到本地;
 - 接收并处理来自 AM 的 Container 启动/停止等请求。
 
 ### 1.2.1 Container
 Container是 YARN 中的资源抽象，它封装了某个节点上的多维度资源，如内存、CPU、网络、磁盘等。当 AM 向 RM 申请资源时，RM 为 AM 返回的资源是使用 Container 表示的。YARN 会为每个任务分配一个 Container，该任务只能使用该Container中描述的资源。AM可以在 Container 中运行任何类型的任务。如MapReduce中的Map Task和Reduce Task。在应用程序执行过程中，可以动态的申请和释放 Container。
 
 ## 1.3 ApplicationMaster-AM
-在用户提交一个 Application 时，YARN 会启动一个**轻量级进程**ApplicationMaster， 负责与 RM（实际上是 Scheduler）协调的资源，并负责应用程序的监控，任务失败重启等，AM 通过 NM 监视容器内资源的使用情况。具体如下：
+在用户提交一个 Application 时，YARN 会启动一个**轻量级进程**ApplicationMaster， 负责与 RM（实际上是 Scheduler）协调的资源，并负责应用程序的监控，重启失败任务等，AM 通过 NM 监视容器内资源的使用情况。具体如下：
 - 根据 Application 运行状态动态决定资源需求；
 - 向 RM 申请/协商资源并监控申请的资源的使用情况；
 - 跟踪任务进度和状态，向 RM 报告资源使用情况和应用的进度信息；
